@@ -1,0 +1,26 @@
+<!-- repositories gallery -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-3 gallery thumbnail"
+      *ngFor="let git of bookmarks| paginate: { itemsPerPage: 20, currentPage: p }">
+      <!-- image -->
+      <div class="">
+        <a target="_blank"
+          href="{{git.avatar}}">
+          <img src="{{git.avatar}}"
+            alt="">
+        </a>
+      </div>
+
+      <div class="caption">
+        <!-- repository name -->
+        <h5><a href="{{git.repoUrl}}"
+            target="_blank">{{git.name}}</a></h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="paginate-container"
+  *ngIf="bookmarks && bookmarks.length > 0">
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div>

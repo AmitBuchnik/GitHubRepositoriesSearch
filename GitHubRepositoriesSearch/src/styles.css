@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+.wrapper{
+    background-color: #EDEDED;
+    padding-top: 40px;
+}
+
+.input-group .form-control{
+    width: auto !important;
+}
+.input-group{
+    margin: 0 auto;
+    padding: 20px;
+}
+.input-group .input-group-btn{
+    float: left;
+}
+
+div.gallery {
+    margin-top: 10px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+}
+
+.paginate-container{
+    clear: both; 
+    text-align: center;
+} 

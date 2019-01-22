@@ -1,0 +1,65 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <!-- <div class="container"> -->
+      <div class="col-sm-12 text-center">
+        <h2 class="text-success">Search Github</h2>
+      </div>
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <div class="input-group">
+            <input type="text"
+              #searchItem
+              ngModel
+              class="form-control"
+              placeholder="Search"
+              (keyup.enter)="loadGithubRepos(searchItem.value)">
+            <div class="
+                input-group-btn">
+              <button class="btn btn-default"
+                type="button"
+                (click)="loadGithubRepos(searchItem.value)">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- repositories gallery -->
+<div class="gallery">
+  <div class="col-sm-6 col-md-3 gallery thumbnail"
+    *ngFor="let git of gitRepoList| paginate: { itemsPerPage: 20, currentPage: p }">
+    <!-- image -->
+    <div class="">
+      <a target="_blank"
+        href="{{git.avatar}}">
+        <img src="{{git.avatar}}"
+          alt="">
+      </a>
+    </div>
+
+    <div class="caption">
+      <!-- repository name -->
+      <h5><a href="{{git.repoUrl}}"
+          target="_blank">{{git.name}}</a></h5>
+      <!-- bookmark button -->
+      <p>
+        <button type="button"
+          class="btn btn-default btn-sm pull-right"
+          (click)="saveBookMark(git)">
+          <span class="glyphicon glyphicon-bookmark"></span> Bookmark
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- pagination -->
+<div class="paginate-container"
+  *ngIf="gitRepoList && gitRepoList.length > 0">
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div>

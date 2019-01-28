@@ -1,4 +1,4 @@
 # GitHubRepositoriesSearch
-MVC and Angular for github repositories search
+MVC 5 and Angular 6 for github repositories search
 
-download the code and pree F5 in visual studio
+download the code and press F5 in visual studio

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { APP_BASE_HREF } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -23,6 +24,7 @@ import { IsBookedDirective } from './isbooked.directive';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     NgxPaginationModule // pagination
   ],
   providers: [

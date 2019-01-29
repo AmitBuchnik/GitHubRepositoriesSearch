@@ -130,14 +130,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _gitrepos_gitrepos_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./gitrepos/gitrepos.component */ "./src/app/gitrepos/gitrepos.component.ts");
-/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
-/* harmony import */ var _bookmarks_bookmarks_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./bookmarks/bookmarks.component */ "./src/app/bookmarks/bookmarks.component.ts");
-/* harmony import */ var _isbooked_directive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./isbooked.directive */ "./src/app/isbooked.directive.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _gitrepos_gitrepos_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./gitrepos/gitrepos.component */ "./src/app/gitrepos/gitrepos.component.ts");
+/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
+/* harmony import */ var _bookmarks_bookmarks_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./bookmarks/bookmarks.component */ "./src/app/bookmarks/bookmarks.component.ts");
+/* harmony import */ var _isbooked_directive__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./isbooked.directive */ "./src/app/isbooked.directive.ts");
+
 
 
 
@@ -156,25 +158,26 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
-                _gitrepos_gitrepos_component__WEBPACK_IMPORTED_MODULE_8__["GitreposComponent"],
-                _header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"],
-                _bookmarks_bookmarks_component__WEBPACK_IMPORTED_MODULE_10__["BookmarksComponent"],
-                _isbooked_directive__WEBPACK_IMPORTED_MODULE_11__["IsBookedDirective"]
+                _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
+                _gitrepos_gitrepos_component__WEBPACK_IMPORTED_MODULE_9__["GitreposComponent"],
+                _header_header_component__WEBPACK_IMPORTED_MODULE_10__["HeaderComponent"],
+                _bookmarks_bookmarks_component__WEBPACK_IMPORTED_MODULE_11__["BookmarksComponent"],
+                _isbooked_directive__WEBPACK_IMPORTED_MODULE_12__["IsBookedDirective"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
-                ngx_pagination__WEBPACK_IMPORTED_MODULE_5__["NgxPaginationModule"] // pagination
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+                ngx_pagination__WEBPACK_IMPORTED_MODULE_6__["NgxPaginationModule"] // pagination
             ],
             providers: [
                 {
-                    provide: _angular_common__WEBPACK_IMPORTED_MODULE_4__["APP_BASE_HREF"],
+                    provide: _angular_common__WEBPACK_IMPORTED_MODULE_5__["APP_BASE_HREF"],
                     useValue: '/'
                 }
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -269,7 +272,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-12\">\n      <!-- <div class=\"container\"> -->\n      <div class=\"col-sm-12 text-center\">\n        <h2 class=\"text-success\">Search Github</h2>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-xs-8 col-xs-offset-2\">\n          <div class=\"input-group\">\n            <input type=\"text\"\n              #searchItem\n              ngModel\n              class=\"form-control\"\n              placeholder=\"Search\"\n              (keyup.enter)=\"loadGithubRepos(searchItem.value)\">\n            <div class=\"\n                input-group-btn\">\n              <button class=\"btn btn-default\"\n                type=\"button\"\n                (click)=\"loadGithubRepos(searchItem.value)\">\n                <i class=\"glyphicon glyphicon-search\"></i>\n              </button>\n            </div>\n          </div>\n        </div>\n      </div>\n      <!-- </div> -->\n    </div>\n  </div>\n</div>\n\n<!-- repositories gallery -->\n<div class=\"gallery\">\n  <div class=\"col-sm-6 col-md-3 gallery thumbnail\"\n    *ngFor=\"let git of gitRepoList| paginate: { itemsPerPage: 20, currentPage: p }\">\n    <!-- image -->\n    <div class=\"\">\n      <a target=\"_blank\"\n        href=\"{{git.avatar}}\">\n        <img src=\"{{git.avatar}}\"\n          alt=\"\">\n      </a>\n    </div>\n\n    <div class=\"caption\">\n      <!-- repository name -->\n      <h5><a href=\"{{git.repoUrl}}\"\n          target=\"_blank\">{{git.name}}</a></h5>\n      <!-- bookmark button -->\n      <p>\n        <button type=\"button\"\n          class=\"btn btn-default btn-sm pull-right\"\n          (click)=\"saveBookMark(git)\">\n          <span class=\"glyphicon glyphicon-bookmark\"></span> Bookmark\n        </button>\n      </p>\n    </div>\n  </div>\n</div>\n<!-- pagination -->\n<div class=\"paginate-container\"\n  *ngIf=\"gitRepoList && gitRepoList.length > 0\">\n  <pagination-controls (pageChange)=\"p=$event\"></pagination-controls>\n</div>"
+module.exports = "<div class=\"wrapper\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-12\">\n      <!-- <div class=\"container\"> -->\n      <div class=\"col-sm-12 text-center\">\n        <h2 class=\"text-success\">Search Github</h2>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-xs-8 col-xs-offset-2\">\n          <div class=\"input-group\">\n            <input type=\"text\"\n              [(ngModel)]=\"searchTerm\"\n              class=\"form-control\"\n              placeholder=\"Search\"\n              (keyup.enter)=\"loadGithubRepos(1)\">\n            <div class=\"\n                input-group-btn\">\n              <button class=\"btn btn-default\"\n                type=\"button\"\n                (click)=\"loadGithubRepos(1)\">\n                <i class=\"glyphicon glyphicon-search\"></i>\n              </button>\n            </div>\n          </div>\n        </div>\n      </div>\n      <!-- </div> -->\n    </div>\n  </div>\n</div>\n\n<!-- repositories gallery -->\n<div class=\"gallery\"\n  *ngIf=\"repositories\">\n  <div class=\"col-sm-6 col-md-3 gallery thumbnail\"\n    *ngFor=\"let git of repositories.items | paginate: { itemsPerPage: 20, currentPage: page, totalItems: 1000 }\">\n    <!-- image -->\n    <div class=\"\">\n      <a target=\"_blank\"\n        href=\"{{git.avatar}}\">\n        <img src=\"{{git.avatar}}\"\n          alt=\"\">\n      </a>\n    </div>\n\n    <div class=\"caption\">\n      <!-- repository name -->\n      <h5><a href=\"{{git.repoUrl}}\"\n          target=\"_blank\">{{git.name}}</a></h5>\n      <!-- bookmark button -->\n      <p>\n        <button type=\"button\"\n          class=\"btn btn-default btn-sm pull-right\"\n          (click)=\"saveBookMark(git)\">\n          <span class=\"glyphicon glyphicon-bookmark\"></span> Bookmark\n        </button>\n      </p>\n    </div>\n  </div>\n</div>\n<!-- pagination -->\n<div class=\"paginate-container\"\n  *ngIf=\"repositories && repositories.items.length > 0\">\n  <pagination-controls (pageChange)=\"p=$event; loadGithubRepos(p)\"></pagination-controls>\n</div>"
 
 /***/ }),
 
@@ -292,16 +295,28 @@ __webpack_require__.r(__webpack_exports__);
 var GitreposComponent = /** @class */ (function () {
     function GitreposComponent(githubserv) {
         this.githubserv = githubserv;
+        this.searchTerm = '';
     }
     GitreposComponent.prototype.ngOnInit = function () {
+        var state = this.githubserv.getState();
+        if (state) {
+            this.searchTerm = state.searchTerm;
+            this.page = state.currentPage;
+            this.repositories = state.repositories;
+        }
+        else {
+            this.page = 1;
+        }
     };
     // click event handler for search repository in github
-    GitreposComponent.prototype.loadGithubRepos = function (searchItem) {
+    GitreposComponent.prototype.loadGithubRepos = function (page) {
         var _this = this;
-        if (searchItem != "") {
-            this.githubserv.getRepositoriesByName(searchItem).subscribe(function (data) {
-                _this.gitRepoList = data;
+        this.page = page;
+        if (this.searchTerm != "") {
+            this.githubserv.getRepositoriesByName(this.searchTerm, page).subscribe(function (data) {
+                _this.repositories = data;
             });
+            // this.repositories = this.githubserv.getRepositoriesByName(this.searchItem, page);
         }
     };
     // save repository in MVC web api
@@ -394,13 +409,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var IsBookedDirective = /** @class */ (function () {
-    // @Input("isBloked") set isBloked(value: boolean) {
-    //     for (var variableName in struct) {
-    //       this[variableName] = struct[variableName];
-    //     }
-    // }
-    function IsBookedDirective(el) {
-        // el.nativeElement.tag = this.isBooked;
+    function IsBookedDirective() {
     }
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
@@ -411,7 +420,7 @@ var IsBookedDirective = /** @class */ (function () {
             selector: '[IsBooked]',
             exportAs: 'IsBooked'
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], IsBookedDirective);
     return IsBookedDirective;
 }());
@@ -424,11 +433,12 @@ var IsBookedDirective = /** @class */ (function () {
 /*!********************************************!*\
   !*** ./src/app/services/github.service.ts ***!
   \********************************************/
-/*! exports provided: GithubService */
+/*! exports provided: State, GithubService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "State", function() { return State; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GithubService", function() { return GithubService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
@@ -438,18 +448,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var State = /** @class */ (function () {
+    function State() {
+    }
+    return State;
+}());
+
 var GithubService = /** @class */ (function () {
     function GithubService(httpClient) {
         this.httpClient = httpClient;
     }
     // get repositories from GitHub using github api
-    GithubService.prototype.getRepositoriesByName = function (searchKeyWord) {
-        return this.httpClient.get("https://api.github.com/search/repositories?q=" + searchKeyWord).
-            pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (item) { return item.items.map(function (p) { return ({
-            name: p.name,
-            repoUrl: p.html_url,
-            avatar: p.owner.avatar_url
-        }); }); }));
+    // getRepositoriesByName(searchKeyWord: string, page: number): Observable<Gitrepoinfo[]> {
+    // return this.httpClient.get(`https://api.github.com/search/repositories?q=` + searchKeyWord).
+    //     pipe(map((item: any) => item.items.map(p => <Gitrepoinfo>
+    //       {
+    //         name: p.name,
+    //         repoUrl: p.html_url,
+    //         avatar: p.owner.avatar_url
+    //       })));
+    // }
+    GithubService.prototype.getState = function () {
+        return this.state;
+    };
+    GithubService.prototype.getRepositoriesByName = function (searchKeyWord, page) {
+        var _this = this;
+        return this.httpClient.get("https://api.github.com/search/repositories?q=" + searchKeyWord + "+in:name&page=" + page + "&per_page=20").
+            pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) { return ({
+            total_count: data.total_count,
+            incomplete_results: data.incomplete_results,
+            items: data.items.map(function (p) { return ({
+                name: p.name,
+                repoUrl: p.html_url,
+                avatar: p.owner.avatar_url
+            }); })
+        }); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (repositories) {
+            _this.state = new State();
+            _this.state.searchTerm = searchKeyWord;
+            _this.state.currentPage = page;
+            _this.state.repositories = repositories;
+        }));
     };
     // get booked repositories from MVC web api
     GithubService.prototype.getBookedRepositories = function () {

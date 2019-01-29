@@ -8,3 +8,9 @@ export class Gitrepoinfo {
     avatar: string;
 }
 
+export class Repositories {
+    total_count: number;
+    incomplete_results: boolean;
+    items: Gitrepoinfo[];
+}
+

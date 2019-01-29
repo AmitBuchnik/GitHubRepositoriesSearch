@@ -9,16 +9,15 @@
         <div class="col-xs-8 col-xs-offset-2">
           <div class="input-group">
             <input type="text"
-              #searchItem
-              ngModel
+              [(ngModel)]="searchTerm"
               class="form-control"
               placeholder="Search"
-              (keyup.enter)="loadGithubRepos(searchItem.value)">
+              (keyup.enter)="loadGithubRepos(1)">
             <div class="
                 input-group-btn">
               <button class="btn btn-default"
                 type="button"
-                (click)="loadGithubRepos(searchItem.value)">
+                (click)="loadGithubRepos(1)">
                 <i class="glyphicon glyphicon-search"></i>
               </button>
             </div>
@@ -31,9 +30,10 @@
 </div>
 
 <!-- repositories gallery -->
-<div class="gallery">
+<div class="gallery"
+  *ngIf="repositories">
   <div class="col-sm-6 col-md-3 gallery thumbnail"
-    *ngFor="let git of gitRepoList| paginate: { itemsPerPage: 20, currentPage: p }">
+    *ngFor="let git of repositories.items | paginate: { itemsPerPage: 20, currentPage: page, totalItems: 1000 }">
     <!-- image -->
     <div class="">
       <a target="_blank"
@@ -60,6 +60,6 @@
 </div>
 <!-- pagination -->
 <div class="paginate-container"
-  *ngIf="gitRepoList && gitRepoList.length > 0">
-  <pagination-controls (pageChange)="p=$event"></pagination-controls>
+  *ngIf="repositories && repositories.items.length > 0">
+  <pagination-controls (pageChange)="p=$event; loadGithubRepos(p)"></pagination-controls>
 </div>
